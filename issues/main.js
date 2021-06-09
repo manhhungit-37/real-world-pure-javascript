@@ -8,9 +8,7 @@ container.classList.add("none");
 let listTodo = [];
 let listIssue;
 const innerIssuesList = document.getElementById("issuesList");
-// fetch("https://tony-json-server.herokuapp.com/api/todos/DQ6i3ik", {
-//     method: "DELETE"
-// })
+
 fetch("https://tony-json-server.herokuapp.com/api/todos")
     .then(res => res.json())
     .then(res => {
