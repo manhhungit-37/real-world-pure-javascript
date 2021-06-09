@@ -37,6 +37,7 @@ login.addEventListener("submit", function(event) {
         loginMessage.innerHTML = "Wrong Email or password!";
         return;
     }
+    console.log(isExist);
     window.location.href = "../contact/contactform.html";
     localStorage.setItem("id", JSON.stringify(isExist.id));
 })

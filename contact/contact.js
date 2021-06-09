@@ -7,10 +7,10 @@ fetch(`https://tony-json-server.herokuapp.com/api/users/${id}`)
     .then(res => {
         dataUser = res.data;
         const contact = document.getElementById("contact");
-        const firstName = document.getElementById("fname"),
-            lastName = document.getElementById("lname"),
-            country = document.getElementById("country"),
-            subject = document.getElementById("subject");
+        const firstName = document.getElementById("fname");
+        const lastName = document.getElementById("lname");
+        const country = document.getElementById("country");
+        const subject = document.getElementById("subject");
         firstName.value = dataUser.firstName;
         lastName.value = dataUser.lastName;
         country.value = dataUser.country;

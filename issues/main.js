@@ -3,7 +3,7 @@ const id = JSON.parse(localStorage.getItem("id"));
 if (!id) window.location.href = "../login/loginform.html";
 
 const loader = document.querySelector(".loader")
-      ,container = document.getElementById("container");
+const container = document.getElementById("container");
 container.classList.add("none");
 let listTodo = [];
 let listIssue;
@@ -105,7 +105,8 @@ function deleteIssue(id) {
         if (listIssue[i].id === id) {
             listIssue.splice(i, 1);
             fetchIssues();
-            i = arrayLength;
+            // i = arrayLength;
+            return;
         }
     }
 }
@@ -121,8 +122,8 @@ function fetchIssues(list = listIssue) {
             <h3> ${list[i].description}</h3>
             <p ><span class="glyphicon glyphicon-time severity"> ${list[i].severity}</span>
             <span class="glyphicon glyphicon-user"></span> ${list[i].assignedTo}</p>
-            <a href="#" class="btn btn-warning setStatus" onclick="setStatus(\' ${list[i].id} \')">Close</a>
-            <a href="#" class="btn btn-danger" onclick="deleteIssue(\' ${list[i].id} \')">Delete</a>
+            <a href="#" class="btn btn-warning setStatus" onclick="setStatus(\'${list[i].id}\')">Close</a>
+            <a href="#" class="btn btn-danger" onclick="deleteIssue(\'${list[i].id}\')">Delete</a>
             </div>`;
 
         if (list[i].severity == "Low") {
