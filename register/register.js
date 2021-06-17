@@ -16,6 +16,7 @@ fetch('https://tony-json-server.herokuapp.com/api/users')
 const register = document.getElementById("register")
 register.addEventListener("submit", function(event) {
     event.preventDefault();
+    const a = 2;
     const resEmailMessage = document.getElementById("email-mess");
     const resPasswordMessage = document.getElementById("password-mess");
     resEmailMessage.innerHTML = "";
